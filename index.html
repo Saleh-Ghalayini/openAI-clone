@@ -31,39 +31,80 @@
         </div>
       </nav>
     </header>
-    <section class="latest">
-      <div class="days">
-        <video autoplay loop playsinline class="bg-days-video">
-          <source src="resources/homepage_desktop_B.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="overlay-content">
-          <h1>12 Days of OpenAI</h1>
-          <h3>Continuing Friday at 10am PT.</h3>
-          <a href="https://openai.com/12-days/">Learn more</a>
+    <div class="latest">
+      <div class="carousel">
+        <div class="carousel-item">
+          <div class="days" style=" height: 100%;">
+            <video autoplay loop playsinline style="height: 100%;width: 100%;position: absolute; top: 0px;
+            left: 0px; object-fit: cover; border-radius: 5px;">
+              <source src="resources/homepage_desktop_B.mp4" type="video/mp4">
+            </video>
+            <div class="vidText">
+              <h2>12 Days of OpenAI</h2>
+              <p>Continuing Monday at 10am PT.</p>
+              <button class="daysBtn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="sora" style="height: 100%;">
+            <video autoplay loop playsinline style="height: 100%;width: 100%;position: absolute; top: 0px;
+            left: 0px; object-fit: cover; border-radius: 5px;">
+              <source src="resources/20241204_0047_Planetary_Christmas_Wonder_simple_compose_01je8dmj2ne6kvhtmyn0dqawpz_.mp4" type="video/mp4">
+            </video>
+            <div class="vidText">
+              <h2 style="color: white;">Sora</h2>
+              <p style="color: white;">Bring your imagination to life from text, image, or video.</p>
+              <button class="whiteBtn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="chatgpt" style="background-color:#171717;">
+            <h1>Ask ChatGPT anything</h1>
+            <form style="width: 100%;">
+              <input id="input-field" type="text" placeholder="Enter your Prompt" />
+              <button id="submit-button" type="submit">
+                <svg class="arrow" width="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path 
+                    d="M1 9L9 1M9 1H2.5M9 1V7.22222" 
+                    stroke="currentColor" stroke-width="1.25" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </button>
+            </form>            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="openai">
+            <img src="resources/yellow-blue-bg.webp" style="width: 100%;"> 
+            <div class="vidText">
+              <h2 style="color: white;">OpenAI o1</h2>
+              <p style="color: white;">A new series of AI models designed to spend <br/>more time thinking before they respond.</p>
+              <button class="whiteBtn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="gptdesk" style="width: 100%;">
+            <img src="resources/pink-blue-bg.webp" style="width: 100%;"> 
+            <div class="vidText">
+              <h2 style="color: white;">ChatGPT on your desktop</h2>
+              <p style="color: white;">Chat about email, screenshots, files, and anything on your screen.</p>
+              <button class="whiteBtn">Learn more</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div></div>
-    </section>
-    <section>
-        <ul class="dots">
-            <li>
-                <button type="button" aria-label="Show slide"></button>
-            </li>
-            <li>
-                <button type="button" aria-label="Show slide"></button>
-            </li>
-            <li>
-                <button type="button" aria-label="Show slide"></button>
-            </li>
-            <li>
-                <button type="button" aria-label="Show slide"></button>
-            </li>
-            <li>
-                <button type="button" aria-label="Show slide"></button>
-            </li>
-        </ul>
-    </section>
-
+      <div class="dots">
+        <span data-index="0" class="active"></span>
+        <span data-index="1" data-color="red" data-height="4367"></span>
+        <span data-index="2"></span>
+        <span data-index="3"></span>
+        <span data-index="4"></span>
+      </div>
+    </div>
   </body>
+<script src="./page.js"></script>
 </html>

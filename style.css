@@ -36,76 +36,187 @@
     margin-left: auto;
     margin-right: 50px;
     cursor: pointer;
+    transition: all 0.3 ease-in-out;
   }
-  
+  .search-icon:hover{
+    transform: rotate(90deg);
+  }
+.w100{
+  width: 100%;
+}
   .latest {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .days {
-    width: 90%;
-    height: 80vh;
-    position: relative;
-  }
-  
-  .bg-days-video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    border-radius: 5px;
-    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    box-sizing: border-box;
   }
   
-  .overlay-content {
-    color: black;
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    position: relative;
+    height: 600px;
+    flex: 0 0 calc(100% - 90px); 
+    padding: 0px;
     text-align: center;
-  }
-
-  .overlay-content h1 {
-    font-size: 48px;
-    font-weight: 500;
-    margin: auto;
-  }
-
-  .overlay-content a {
-    background-color: #000;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .overlay-content a:hover {
-    background-color: #444;
   }
   
   .dots {
     display: flex;
-    list-style: none;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+    margin-top: 20px;
+    align-items: center;
   }
-
-  .dots button {
-    width: 1rem;
-    height: 1rem;
+  
+  .dots span {
+    width: 8px;
+    height: 8px;
+    background-color: #b1b1b1;
     border-radius: 50%;
-    border: none;
-    background-color: rgb(82, 81, 81);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .dots span.active,  .dots span:hover {
+    background-color: #fff;
+  }
+  .days, .sora, .chatgpt, .openai, .gptdesk, .vItem{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
   }
 
   
+.vidText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.vidText h2, .vidText h3, .vidText button {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.daysBtn {
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.daysBtn:hover {
+  background-color: grey;
+}
+
+.vidText h2 {
+  font-size: 3.37125rem;
+  line-height: 110%;
+  letter-spacing: -.02em;
+  font-weight: 500;
+}
+
+.vidText p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.whiteBtn {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.chatgpt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+
+.chatgpt h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.chatgpt input {
+  background-color: rgb(51 51 51);
+  border: transparent;
+  border-radius: 30px;
+  width: 36%;
+  height: 45px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px 15px;
+  width: 70%;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: rgb(220, 220, 220);
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button svg {
+  transform: rotate(45deg);
+  color: darkgray;
+  transition: all 0.3s ease;
+}
+
+button.active {
+  background-color: white;
+}
+
+button.active svg {
+  color: darkgray;
+}
+
+button:focus {
+  outline: none;
+}
+
