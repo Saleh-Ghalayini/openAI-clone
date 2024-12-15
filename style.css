@@ -7,14 +7,24 @@
     color: white;
     background-color: black;
   }
-  
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 1;
+    background-color: #000;
+  }
   nav {
     display: flex;
     align-items: center;
+    max-width: 1250px;
+    padding: 10px 30px;
     justify-content: space-evenly;
-    margin: 0 10%;
+    margin: auto;
     height: 35px;
-    margin-bottom: 10px;
+    
   }
   
   .logo {
