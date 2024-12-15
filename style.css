@@ -41,9 +41,7 @@
   .search-icon:hover{
     transform: rotate(90deg);
   }
-.w100{
-  width: 100%;
-}
+
   .latest {
     width: 100%;
     overflow: hidden;
@@ -52,7 +50,7 @@
     box-sizing: border-box;
   }
   
-  .carousel {
+  .MainCarousel {
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease-in-out;
@@ -86,7 +84,7 @@
   .dots span.active,  .dots span:hover {
     background-color: #fff;
   }
-  .days, .sora, .chatgpt, .openai, .gptdesk, .vItem{
+  .days, .sora, .chatgpt, .openai, .gptdesk{
     z-index: -1;
     width: 100%;
     height: 100%;
@@ -190,7 +188,7 @@ input {
   font-size: 16px;
 }
 
-button {
+.chatgpt button {
   background-color: rgb(220, 220, 220);
   border: none;
   border-radius: 50%;
@@ -202,21 +200,150 @@ button {
   align-items: center;
 }
 
-button svg {
+.chatgpt button svg {
   transform: rotate(45deg);
   color: darkgray;
   transition: all 0.3s ease;
 }
 
-button.active {
+.chatgpt button.active {
   background-color: white;
 }
 
-button.active svg {
+.chatgpt button.active svg {
   color: darkgray;
 }
 
-button:focus {
+.chatgpt button:focus {
   outline: none;
 }
 
+.products {
+  margin-top: 100px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.carousel-products {
+  padding: 0 200px;
+  display: flex;
+  gap: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-products {
+  position: relative;
+  height: 460px;
+  flex: 0 0 calc(40% - 90px); 
+  padding: 0px;
+  text-align: center;
+  border-radius: 3px;
+  transition: transform 0.5s ease;
+}
+
+.title {
+  padding: 0 0px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 300px);
+}
+
+.nav {
+  background-color: transparent; 
+  border: none; 
+  color: gray; 
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav:hover {
+  color: white;
+  border: none;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 200px; /* To match carousel-products padding */
+  margin: 0 auto;
+}
+
+.carousel-track {
+  position: relative;
+  display: flex;
+  gap: 15px; /* To match the gap between items */
+  transition: transform 0.5s ease-in-out;
+  margin: 0 -20px;
+}
+
+.slide {
+  position: relative;
+  height: 460px; /* Same height as carousel-item-products */
+  flex: 0 0 calc(40% - 90px); /* Same flex value as carousel-item-products */
+  padding: 0px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 7px;
+}
+
+@media (max-width: 500px) {
+  .slide {
+    flex: 0 0 calc(100%  - 20px);
+  }
+}
+@media (min-width: 500px) {
+  .slide {
+    flex: 0 0 calc(100% / 2 - 20px);
+  }
+}
+
+@media (min-width: 900px) {
+  .slide {
+    flex: 0 0 calc(100% / 4 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .title {
+    justify-content: space-between;
+    width: calc(100vw - 100px);
+  }
+  .carousel {
+    padding: 0 50px;
+  }
+}
+/* .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+} */
