@@ -276,22 +276,22 @@ input {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 0 200px; /* To match carousel-products padding */
+  padding: 0 200px;
   margin: 0 auto;
 }
 
 .carousel-track {
   position: relative;
   display: flex;
-  gap: 15px; /* To match the gap between items */
+  gap: 15px;
   transition: transform 0.5s ease-in-out;
   margin: 0 -20px;
 }
 
 .slide {
   position: relative;
-  height: 460px; /* Same height as carousel-item-products */
-  flex: 0 0 calc(40% - 90px); /* Same flex value as carousel-item-products */
+  height: 460px;
+  flex: 0 0 calc(40% - 90px);
   padding: 0px;
   text-align: center;
   border-radius: 3px;
@@ -328,22 +328,3 @@ input {
     padding: 0 50px;
   }
 }
-/* .nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  z-index: 1;
-}
-
-.nav.prev {
-  left: 10px;
-}
-
-.nav.next {
-  right: 10px;
-} */
